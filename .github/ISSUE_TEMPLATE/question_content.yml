@@ -1,0 +1,36 @@
+name: Question content issue
+description: Report an unclear, inaccurate, or duplicated finance scenario.
+title: 'content: '
+labels: [content]
+body:
+  - type: input
+    id: question-id
+    attributes:
+      label: Question ID
+      description: The stable ID in the question pack source.
+      placeholder: core-ethics-001
+    validations:
+      required: true
+  - type: dropdown
+    id: concern
+    attributes:
+      label: Type of concern
+      options:
+        - Accuracy
+        - Ambiguity
+        - Accessibility or clarity
+        - Duplicate concept
+        - Metadata or resource impact
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Explain the concern without copying protected third-party material.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement

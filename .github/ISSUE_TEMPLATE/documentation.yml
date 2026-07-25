@@ -1,0 +1,22 @@
+name: Documentation improvement
+description: Suggest a correction or clarification to project documentation.
+title: 'docs: '
+labels: [documentation]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Document or section
+      placeholder: README — Local development
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is unclear or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested change

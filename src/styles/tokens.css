@@ -1,0 +1,25 @@
+:root {
+  color-scheme: dark;
+  --color-background: #151918;
+  --color-surface: #1c2220;
+  --color-surface-raised: #242b29;
+  --color-border: #46514d;
+  --color-text: #eceee8;
+  --color-text-muted: #a8b0aa;
+  --color-accent: #55bbaa;
+  --color-accent-strong: #70d2c0;
+  --color-focus: #f0d26a;
+  --color-positive: #78c69a;
+  --color-negative: #e08276;
+  --color-warning: #e1bd68;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --container-width: 70rem;
+  --content-width: 52rem;
+  --control-min-size: 2.75rem;
+}
