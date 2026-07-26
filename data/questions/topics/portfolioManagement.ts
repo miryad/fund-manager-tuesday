@@ -12,6 +12,7 @@ export const portfolioManagementQuestions = [
       'Matching the equity index exactly',
     ],
     correctIndex: 2,
+    answerSeverities: ['serious', 'serious', 'routine', 'severe'],
     explanation:
       'A near-term, known liability requires liquid, low-volatility assets. Return seeking should not endanger the foundation’s ability to make the payment.',
     difficulty: 'easy',
@@ -28,6 +29,7 @@ export const portfolioManagementQuestions = [
       'The client knows the company better than other investments',
     ],
     correctIndex: 0,
+    answerSeverities: ['routine', 'serious', 'serious', 'severe'],
     explanation:
       'The client has concentrated exposure because both human capital and financial capital depend on one employer. Diversification can reduce that linked risk.',
     difficulty: 'easy',

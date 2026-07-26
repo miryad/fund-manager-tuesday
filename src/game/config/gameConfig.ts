@@ -38,7 +38,7 @@ export interface GameConfig {
 }
 
 export const gameConfig: GameConfig = {
-  timerDurationMilliseconds: 15_000,
+  timerDurationMilliseconds: 20_000,
   resources: {
     capital: {
       label: 'Capital',

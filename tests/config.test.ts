@@ -4,7 +4,7 @@ import { CITIES, RESOURCE_IDS } from '../src/game/types';
 
 describe('central game configuration', () => {
   it('loads settled timer, timeout, and city decisions', () => {
-    expect(gameConfig.timerDurationMilliseconds).toBe(15_000);
+    expect(gameConfig.timerDurationMilliseconds).toBe(20_000);
     expect(gameConfig.timeoutChanges).toEqual({ lpTrust: -8, reputation: -4 });
     expect(gameConfig.cities).toEqual(CITIES);
     expect(gameConfig.cities).toHaveLength(15);

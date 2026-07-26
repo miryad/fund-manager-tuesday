@@ -7,19 +7,20 @@ export function SplashScreen({ onStart }: SplashScreenProps) {
     <section className="splash screen" aria-labelledby="splash-title">
       <div className="splash__status" aria-hidden="true">
         <span>MARKET WINDOW / OPEN</span>
-        <span>RISK LINK / STANDBY</span>
       </div>
-      <p className="eyebrow">One fund. Five signals. Fifteen seconds.</p>
+      <p className="eyebrow">One fund. Five priorities. Twenty seconds.</p>
       <h1 id="splash-title">
-        Fund Manager <span>Tuesday</span>
+        Fund Manager <span>// Tuesday</span>
       </h1>
       <p className="screen__copy">
         Keep the fund alive through a sequence of decisions under pressure.
       </p>
       <button className="button button--primary" type="button" onClick={onStart}>
-        Start Run <span aria-hidden="true">→</span>
+        Enter Market <span aria-hidden="true">→</span>
       </button>
-      <p className="splash__note">No account. No market connection. Every run is seeded.</p>
+      <p className="splash__note" aria-hidden="true">
+        ────────────────────────────
+      </p>
     </section>
   );
 }

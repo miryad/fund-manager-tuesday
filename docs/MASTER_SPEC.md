@@ -45,7 +45,7 @@ A run is an open-ended sequence of scenario-based questions:
 
 1. A scenario appears.
 2. Four possible decisions appear.
-3. A 15-second timer starts.
+3. A 20-second timer starts.
 4. The player chooses an answer, or the timer expires.
 5. The correct answer is revealed.
 6. A concise explanation appears.
@@ -75,7 +75,7 @@ Every scenario must:
 - require one meaningful decision;
 - contain four plausible answers with exactly one best answer;
 - test a recognisable finance competency;
-- be answerable in approximately 15 seconds;
+- be answerable in approximately 20 seconds;
 - avoid unnecessary calculations;
 - use clear international English;
 - avoid jurisdiction-specific details unless essential;
@@ -146,7 +146,7 @@ Changes occur immediately after each answer. Resource values and failure thresho
 
 ## 8. Timer expiry
 
-The decision timer is **15 seconds**. On expiry, do not label the outcome simply “Wrong.” Use:
+The decision timer is **20 seconds**. On expiry, do not label the outcome simply “Wrong.” Use:
 
 > No decision made.
 >
@@ -387,7 +387,7 @@ The first playable MVP is complete when:
 - a seeded financial centre is assigned;
 - scenarios are selected deterministically;
 - every scenario presents four answers;
-- the 15-second timer works;
+- the 20-second timer works;
 - answers and timeouts resolve correctly;
 - explanations are shown;
 - resources update immediately;

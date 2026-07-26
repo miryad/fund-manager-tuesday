@@ -12,6 +12,7 @@ export const alternativeInvestmentsQuestions = [
       'Lower expected occupancy and leasing costs',
     ],
     correctIndex: 3,
+    answerSeverities: ['serious', 'severe', 'serious', 'routine'],
     explanation:
       'Property value depends on expected future cash flow. Vacancy, incentives, and reletting costs can materially reduce near-term income.',
     difficulty: 'easy',
@@ -28,6 +29,7 @@ export const alternativeInvestmentsQuestions = [
       'Daily trading guarantees higher returns',
     ],
     correctIndex: 2,
+    answerSeverities: ['severe', 'severe', 'routine', 'serious'],
     explanation:
       'Private equity commitments are illiquid and distributions are controlled by exits. The investor must be able to tolerate uncertain, long holding periods.',
     difficulty: 'easy',

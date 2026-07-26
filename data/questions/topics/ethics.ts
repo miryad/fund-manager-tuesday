@@ -12,6 +12,7 @@ export const ethicsQuestions = [
       'Refuse and disclose the complaint through the agreed investor process',
     ],
     correctIndex: 3,
+    answerSeverities: ['severe', 'severe', 'serious', 'routine'],
     explanation:
       'Preferential access cannot justify concealing material information. Transparent, consistent disclosure protects investors and the integrity of the process.',
     difficulty: 'easy',
@@ -28,6 +29,7 @@ export const ethicsQuestions = [
       'Ask a relative to make the investment',
     ],
     correctIndex: 2,
+    answerSeverities: ['severe', 'serious', 'routine', 'severe'],
     explanation:
       'A personal position can conflict with the fund’s opportunity and your objectivity. Disclosure and the established dealing policy should govern the decision.',
     difficulty: 'easy',
@@ -44,6 +46,7 @@ export const ethicsQuestions = [
       'Remove all benchmark comparisons without explanation',
     ],
     correctIndex: 0,
+    answerSeverities: ['routine', 'serious', 'severe', 'serious'],
     explanation:
       'Performance communication must be accurate and not misleading. Correcting the error promptly is more important than avoiding an awkward explanation.',
     difficulty: 'easy',

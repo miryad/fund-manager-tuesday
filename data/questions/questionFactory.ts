@@ -66,20 +66,41 @@ export interface QuestionSeed {
   readonly explanation: string;
   readonly difficulty: Difficulty;
   readonly tags: readonly string[];
+  readonly answerSeverities?: readonly [
+    ConsequenceSeverity,
+    ConsequenceSeverity,
+    ConsequenceSeverity,
+    ConsequenceSeverity,
+  ];
 }
+
+export type ConsequenceSeverity = 'routine' | 'serious' | 'severe';
+
+const CONSEQUENCE_PENALTIES: Readonly<Record<ConsequenceSeverity, number>> = {
+  routine: -4,
+  serious: -5,
+  severe: -7,
+};
+
+const DEFAULT_SEVERITY: Readonly<Record<Difficulty, ConsequenceSeverity>> = {
+  easy: 'routine',
+  medium: 'serious',
+  hard: 'severe',
+};
 
 export function createQuestion(topic: QuestionTopic, seed: QuestionSeed): Question {
   const resources = TOPIC_RESOURCES[topic];
   const impactReasons = TOPIC_IMPACT_REASONS[topic];
   const answers = seed.answers.map((text, index): Answer => {
     const correct = index === seed.correctIndex;
+    const severity = seed.answerSeverities?.[index] ?? DEFAULT_SEVERITY[seed.difficulty];
     return {
       id: `${seed.id}-${String.fromCharCode(97 + index)}`,
       text,
       resourceChanges: [
         {
           resource: correct ? resources[0] : resources[index % resources.length]!,
-          amount: correct ? 3 : -4,
+          amount: correct ? 3 : CONSEQUENCE_PENALTIES[severity],
           reason: correct ? impactReasons[0] : impactReasons[1],
         },
       ],

@@ -6,6 +6,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+### Changed
+
+- Increased decision time from 15 to 20 seconds.
+- Added deterministic routine, serious, and severe answer consequences.
+- Updated splash-screen copy while preserving its terminal layout and styling.
+
 ### Planned
 
 - Balance review based on public playtesting.

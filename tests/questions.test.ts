@@ -82,6 +82,23 @@ describe('production question pack', () => {
     expect(ventureScenarios.length).toBeLessThanOrEqual(30);
   });
 
+  it('uses deterministic, data-driven consequence severity while keeping timeout worst overall', () => {
+    const question = ProductionQuestionPack.questions.find(
+      ({ id }) => id === 'eth-001-founder-side-letter',
+    );
+    expect(question?.answers.map(({ resourceChanges }) => resourceChanges[0]?.amount)).toEqual([
+      -7, -7, -5, 3,
+    ]);
+
+    const incorrectPenalties = ProductionQuestionPack.questions.flatMap((item) =>
+      item.answers
+        .filter(({ id }) => id !== item.correctAnswerId)
+        .flatMap(({ resourceChanges }) => resourceChanges.map(({ amount }) => amount)),
+    );
+    expect(new Set(incorrectPenalties)).toEqual(new Set([-4, -5, -7]));
+    expect(Math.min(...incorrectPenalties)).toBeGreaterThan(-12);
+  });
+
   it('avoids prohibited exam framing and placeholder content', () => {
     const allText = ProductionQuestionPack.questions
       .flatMap((question) => [

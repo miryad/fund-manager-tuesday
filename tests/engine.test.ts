@@ -42,7 +42,7 @@ describe('run engine', () => {
     expect(state.lastResult).toMatchObject({
       outcome: 'timedOut',
       selectedAnswerId: null,
-      elapsedMilliseconds: 15_000,
+      elapsedMilliseconds: 20_000,
     });
     expect(state.lastResult?.resourceChanges).toEqual([
       expect.objectContaining({ resource: 'lpTrust', amount: -8 }),
@@ -60,7 +60,7 @@ describe('run engine', () => {
       correctAnswers: 1,
       incorrectAnswers: 1,
       timeoutCount: 1,
-      runDurationMilliseconds: 20_000,
+      runDurationMilliseconds: 25_000,
     });
     expect(summary.accuracyPercentage).toBeCloseTo(100 / 3);
     expect(summary.resourceHistory).toHaveLength(4);

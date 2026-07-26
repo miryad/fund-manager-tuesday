@@ -12,6 +12,7 @@ export const derivativesQuestions = [
       'Borrow in a foreign currency',
     ],
     correctIndex: 1,
+    answerSeverities: ['severe', 'routine', 'serious', 'severe'],
     explanation:
       'The airline is harmed by rising input prices, so a long futures position can gain as fuel prices rise and offset higher operating cost.',
     difficulty: 'easy',
@@ -28,6 +29,7 @@ export const derivativesQuestions = [
       'Buy an uncovered call option',
     ],
     correctIndex: 2,
+    answerSeverities: ['severe', 'serious', 'routine', 'severe'],
     explanation:
       'A purchased put establishes downside protection while retaining gains if the underlying equity rises, in exchange for the option premium.',
     difficulty: 'easy',

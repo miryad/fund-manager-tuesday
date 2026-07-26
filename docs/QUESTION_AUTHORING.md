@@ -18,7 +18,7 @@ Every scenario must:
 
 - be written from scratch;
 - describe a concrete investment, company, client, market, regulatory, or fund situation;
-- be answerable in about 15 seconds;
+- be answerable in about 20 seconds;
 - contain exactly four plausible answers;
 - have exactly one best answer;
 - test a recognizable finance competency;
@@ -73,6 +73,19 @@ Effects must follow the scenario:
 - investment judgement → Capital.
 
 Consequences are immediate. Do not encode delayed effects.
+
+Incorrect answers default to a penalty calibrated by question difficulty. When choices
+within one scenario carry materially different risks, add an `answerSeverities` tuple
+using `routine`, `serious`, or `severe` in answer order. Use severe sparingly for
+decisions that could plausibly cause major capital loss, governance damage, or an
+unhedged exposure; the correct answer's entry is ignored.
+
+```ts
+answerSeverities: ['severe', 'serious', 'routine', 'severe'];
+```
+
+This is content data: it changes the magnitude of the existing immediate resource
+effect and does not require engine changes.
 
 ## IDs and tags
 

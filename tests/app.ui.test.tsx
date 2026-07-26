@@ -10,14 +10,14 @@ afterEach(() => {
 });
 
 function startRun(): void {
-  fireEvent.click(screen.getByRole('button', { name: /start run/i }));
+  fireEvent.click(screen.getByRole('button', { name: /enter market/i }));
 }
 
 describe('playable React vertical slice', () => {
   it('starts on the non-CFA splash and creates a run through the engine', () => {
     render(<App />);
 
-    expect(screen.getByRole('heading', { name: /fund manager tuesday/i })).toBeTruthy();
+    expect(screen.getByRole('heading', { name: /fund manager.*tuesday/i })).toBeTruthy();
     expect(document.body.textContent).not.toContain('CFA');
 
     startRun();
@@ -47,7 +47,7 @@ describe('playable React vertical slice', () => {
     startRun();
 
     act(() => {
-      vi.advanceTimersByTime(15_100);
+      vi.advanceTimersByTime(20_100);
     });
 
     expect(screen.getByRole('heading', { name: 'No decision made' })).toBeTruthy();

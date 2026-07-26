@@ -4,7 +4,7 @@
 
 Fund Manager Tuesday is a mobile-first browser game about keeping an investment fund alive through fast, scenario-based decisions. It is not an exam simulator, a conventional quiz app, or an official CFA Institute product.
 
-The player manages Capital, LP Trust, Reputation, Liquidity, and Risk Buffer while responding to practical investment situations under a 15-second deadline. Every run is deterministic from its seed.
+The player manages Capital, LP Trust, Reputation, Liquidity, and Risk Buffer while responding to practical investment situations under a 20-second deadline. Every run is deterministic from its seed.
 
 ## Screenshots
 
@@ -18,7 +18,7 @@ The player manages Capital, LP Trust, Reputation, Liquidity, and Risk Buffer whi
 
 1. Start a randomly seeded Tuesday.
 2. Review a professional finance scenario.
-3. Choose one of four decisions within 15 seconds.
+3. Choose one of four decisions within 20 seconds.
 4. See the correct decision, explanation, and immediate resource impact.
 5. Continue until a critical resource reaches its failure threshold or the available scenario book is complete.
 6. Review accuracy, competency percentages, final resources, seed, city, and prestige rank.
